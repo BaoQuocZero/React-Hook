@@ -1,5 +1,5 @@
 
-import './Nav.css';
+import './Nav.scss';
 
 const Nav = () => {
     return (

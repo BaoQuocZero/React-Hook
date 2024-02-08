@@ -14,7 +14,7 @@ const App = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World by {name}</h1>
-        <h1>Obj = {obj.name} god of {obj.god}</h1>
+        <h1 style={{ color: 'red' }}>Obj = {obj.name} god of {obj.god}</h1>
         <a href={link} target='_blank'>Video React</a>
         <p>{JSON.stringify(obj)}</p>
       </header>
