@@ -8,15 +8,21 @@ const App = () => {
   let name = "Bao";
   let obj = { name: "Quoc", god: "Trai Dat" }
   let link = "https://www.youtube.com/watch?v=Y9gTouaZJ5s&list=PLncHg6Kn2JT4xzJyhXfmJ53dzwVbq-S_E&index=10"
+
+  const HandleeEvenClick = (event) => {
+    console.log(">>> Click me", event.target.value)
+  }
+
   return (
     <div className="App">
       <Nav />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World by {name}</h1>
-        <h1 style={{ color: 'red' }}>Obj = {obj.name} god of {obj.god}</h1>
-        <a href={link} target='_blank'>Video React</a>
-        <p>{JSON.stringify(obj)}</p>
+
+        <input type='text' value={'Eric'} onClick={(event) => HandleeEvenClick(event)} />
+        <button type='buttion' onClick={(event) => HandleeEvenClick(event)}>Click me</button>
+
       </header>
     </div>
   );
