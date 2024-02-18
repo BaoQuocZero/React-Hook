@@ -7,10 +7,10 @@ import Nav from './views/Nav/Nav';
 const App = () => {
 
   let [name, setName] = useState('Eric')
-  let [address, setAddress] = useState('Tra Vinh')
+  let [address, setAddress] = useState('')
 
   const HandleeEvenClick = (event) => {
-    setName('Bao Vip Pro')
+    setName(address)
   }
 
   const handleeOnchangeInput = (event) => {
