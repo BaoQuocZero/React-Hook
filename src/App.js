@@ -1,16 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 import Nav from './views/Nav/Nav';
 
 const App = () => {
 
-  let name = "Bao";
-  let obj = { name: "Quoc", god: "Trai Dat" }
-  let link = "https://www.youtube.com/watch?v=Y9gTouaZJ5s&list=PLncHg6Kn2JT4xzJyhXfmJ53dzwVbq-S_E&index=10"
+  let [name, setName] = useState('Eric')
+  let [address, setAddress] = useState('Tra Vinh')
 
   const HandleeEvenClick = (event) => {
-    console.log(">>> Click me", event.target.value)
+    setName('Bao Vip Pro')
+  }
+
+  const handleeOnchangeInput = (event) => {
+    setAddress(event.target.value)
   }
 
   return (
@@ -20,7 +24,7 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World by {name}</h1>
 
-        <input type='text' value={'Eric'} onClick={(event) => HandleeEvenClick(event)} />
+        <input type='text' value={address} onChange={(event) => handleeOnchangeInput(event)} />
         <button type='buttion' onClick={(event) => HandleeEvenClick(event)}>Click me</button>
 
       </header>
